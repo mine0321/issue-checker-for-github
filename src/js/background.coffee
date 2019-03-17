@@ -44,7 +44,7 @@ syncIssues = (data)->
     localStorage.lastIssues = JSON.stringify $.map data, (d, idx)->
       {id: d.id, updated_at: new Date(d.updated_at).getTime() } 
   else
-    window.githubClient.issues({filter: filterType, state: 'open'}).done (data)->
+    window.githubClient.issues1({filter: filterType, state: 'open'}).done (data)->
       updateBadge(data.length)
 
       if localStorage.notification == 'yes'
