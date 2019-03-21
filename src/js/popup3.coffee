@@ -36,7 +36,6 @@ updatePage = (data)->
 failurePage = (jqXHR, textStatus)->
   $list = $('#list3')
   $list.html('Please set a valid access token.')
-  chrome.tabs.create({url: '/options.html'})
 
 loadIssues = (filterType)->
   $('#tabs [data-filter-type]').removeClass('selected')
