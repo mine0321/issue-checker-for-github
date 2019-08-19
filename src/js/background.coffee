@@ -53,7 +53,7 @@ syncIssues = (data)->
             {id: d.id, updated_at: new Date(d.updated_at).getTime() } 
 
 $ ()->
-  pollInterval = 10 * 1000
+  pollInterval = 1 * 1000
 
   syncIssues()
 

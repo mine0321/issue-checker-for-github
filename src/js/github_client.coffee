@@ -1,6 +1,7 @@
 window.githubClient = {
   get: (url, options)->
-    data = $.extend({}, options)
+    maxAgeTime = 10 * 1000
+    data = $.extend({_: Math.round((new Date()).getTime() / maxAgeTime)}, options)
     if url.indexOf(localStorage.endPoint1) != -1
       data.access_token = localStorage.accessToken1
     else if url.indexOf(localStorage.endPoint2) != -1
@@ -11,8 +12,7 @@ window.githubClient = {
     return $.ajax {
       url: url,
       data: data,
-      type: 'GET',
-      cache: false
+      type: 'GET'
     }
   issues1: (options)->
     githubClient.get (localStorage.endPoint1 || 'https://api.github.com/') + 'issues', $.extend({filter: 'assigned', state: 'open'}, options)
