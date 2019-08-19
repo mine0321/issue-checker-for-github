@@ -11,7 +11,8 @@ window.githubClient = {
     return $.ajax {
       url: url,
       data: data,
-      type: 'GET'
+      type: 'GET',
+      cache: false
     }
   issues1: (options)->
     githubClient.get (localStorage.endPoint1 || 'https://api.github.com/') + 'issues', $.extend({filter: 'assigned', state: 'open'}, options)
