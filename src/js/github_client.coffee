@@ -1,6 +1,6 @@
 window.githubClient = {
   get: (url, options)->
-    maxAgeTime = 10 * 1000
+    maxAgeTime = 30 * 1000
     data = $.extend({_: Math.round((new Date()).getTime() / maxAgeTime)}, options)
     if url.indexOf(localStorage.endPoint1) != -1
       data.access_token = localStorage.accessToken1
