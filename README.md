@@ -15,19 +15,19 @@ Firstly, load the `app` directory directly onto (extension management page)[chro
 Then, start watching the `src` directory to compile the assets automatically.
 
 ```bash
-grunt watch
+yarn install && grunt watch
 ```
 
 Or you can compile them by yourself as well.
 
 ```bash
-grunt compile
+yarn install && grunt compile
 ```
 
 # How to pack
 
 ```bash
-yarn install && grunt pack || grunt pack --force
+yarn install && grunt pack
 ```
 
 [store]: https://chrome.google.com/webstore/detail/issue-checker-for-github/dejgifcjoefbogdjpjokobdlddjhbich
