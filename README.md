@@ -27,7 +27,7 @@ grunt compile
 # How to pack
 
 ```bash
-grunt pack
+yarn install && grunt pack || grunt pack --force
 ```
 
 [store]: https://chrome.google.com/webstore/detail/issue-checker-for-github/dejgifcjoefbogdjpjokobdlddjhbich
